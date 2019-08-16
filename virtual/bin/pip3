@@ -1,4 +1,4 @@
-#!/home/jenn/Documents/Flask_Blog/virtual/bin/python
+#!/home/jenn/Desktop/Flask_Blog/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
