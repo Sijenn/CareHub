@@ -24,68 +24,69 @@
   <body>
 
     <header role="banner">
-      <div class="top-bar">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-sm-6 col-5">
-              <ul class="social list-unstyled">
-                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-sm-6 col-7 text-right">
-              <p class="mb-0">
-                <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">Make an Appointment</a></p>
-            </div>
-          </div>
-        </div>
+    <div class="top-bar">
+      <div class="container">
+         <div class="row">
+           <div class="col-md-6 col-sm-6 col-5">
+             <ul class="social list-unstyled">
+               <li><a href="https://www.facebook.com/CareHub-112615073428983/"><span class="fa fa-facebook"></span></a></li>
+               <li><a href="https://twitter.com/home?lang=en"><span class="fa fa-twitter"></span></a></li>
+               <li><a href="https://www.instagram.com/carehub2788/"><span class="fa fa-instagram"></span></a></li>/providers
+             </ul>
+           </div>
+           <div class="col-md-6 col-sm-6 col-7 text-right">
+             <p class="mb-0">
+               <a href="{{url_for('auth.login')}}" class="cta-btn" >Make an Appointment</a></p>
+           </div>
+         </div>
       </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="/index">CareHub<span>+</span>  </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+         <a class="navbar-brand" href="/">Care <span>HuB</span>  </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+​
+         <div class="collapse navbar-collapse" id="navbarsExample05">
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+               <a class="nav-link active" href="/">Home</a>
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+               <div class="dropdown-menu" aria-labelledby="dropdown04">
+                 <a class="dropdown-item" href="/support">Support</a>
+                 <a class="dropdown-item" href="/facts">Facts</a>
+                 <a class="dropdown-item" href="/services">Providers</a>
+               </div>
+​
+             </li>
+             <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>
+               <div class="dropdown-menu" aria-labelledby="dropdown05">
+                 <a class="dropdown-item" href="/provider">Find Doctors</a>
+                 <a class="dropdown-item" href="#">Practitioner</a>
+               </div>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="/news">News</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link"href="{{url_for('auth.login')}}">Blog</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="/about">About</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="/contact">Contact</a>
+             </li>
+           </ul>
+         </div>
+      </div>
+    </nav>
+  </header>
 
-          <div class="collapse navbar-collapse" id="navbarsExample05">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/index">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="#">Institute</a>
-                  <a class="dropdown-item" href="#">Departments</a>
-                  <a class="dropdown-item" href="services.html">Services</a>
-                </div>
-
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="doctors.html">Find Doctors</a>
-                  <a class="dropdown-item" href="#">Practitioner</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link"href="{{url_for('auth.login')}}">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
     <!-- END header -->
 
 
@@ -98,7 +99,7 @@
               <h1>Cnacer &amp; Facts</h1>
               <h2>What is cancer and what courses it</h2>
                 <p>Cancer is a collection of over 200 diseases in which cells of an organ or tissue in the body become abnormal, growing and multiplying out of control.</p>
-                <p>Cancer is NOT caused by witchcraft or any form of supernatural force. Cancer is a disease that can affect anyone, anywhere, in any country, at anytime.  Cancer is a complex group of diseases with many possible causes</p>
+                <p>Cancer is NOT caused by witchcraft or any form of supernatural force. Cancer is a disease that can affect anyone, anywhere, in any country, at anytime.  Cancer is a complex group of diseases with many possible causes</p>
 
             </div>
           </div>
@@ -141,7 +142,7 @@
 
                     <li>Get 10-15 minutes of sunshine a day</li>
 
-                    <li>Do, eat, live everything in moderation.  Reduce stress.</li>
+                    <li>Do, eat, live everything in moderation.  Reduce stress.</li>
 
                     <li>Allow yourself 8 hours of sleep at night for optimum rest.</li>
 
@@ -226,11 +227,11 @@
                 <p>This is a treatment that uses high energy beams of radiation which are focused on cancerous tissue. This kills cancer cells, or stops cancer cells from multiplying.</p>
                 <li>Bone Marrow Transplant</li>
                   <p>High dose chemotherapy may damage bone marrow cells and lead to blood problems. However, if you receive healthy bone marrow after the chemotherapy then this helps to overcome this problem.</p>
-                  <li>Hormone therapy: </li>
+                  <li>Hormone therapy: </li>
                   <p>This is where drugs are used to block the effects of hormones. This treatment may be used for cancers that are “hormone sensitive” such as some cancers of the breast, prostate and uterus.</p>
-                  <li>Immunotherapy: </li>
+                  <li>Immunotherapy: </li>
                   <p>Some treatments can boost the immune system to help to fight cancer. More specific immunotherapy involves injections of antibodies which aim to attack and destroy certain types of cancer cells.</p>
-                  <li>Gene therapy </li>
+                  <li>Gene therapy </li>
                   <p>Is a new area of possible treatments. Research is underway to find ways of blocking, repairing or replacing abnormal genes in cancer cells.</p>
                 </ul>
 
@@ -296,11 +297,11 @@
           <div class="col-md-3 mb-5">
             <h3>Services</h3>
             <ul class="footer-link list-unstyled">
-              <li><a href="#">Find a doctor</a></li>
-              <li><a href="#">Urgent Care</a></li>
-              <li><a href="#">Emergency Care</a></li>
-              <li><a href="#">Procedures &amp; Treatments</a></li>
-              <li><a href="#">Online Services</a></li>
+              <li><a href="/provider">Find a doctor</a></li>
+              <li><a href="/contact">Urgent Care</a></li>
+              <li><a href="/contact">Emergency Care</a></li>
+              <li><a href="/facts">Procedures &amp; Treatments</a></li>
+              <li><a href="/services">Online Services</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">
@@ -342,9 +343,10 @@
             <p>&copy; 2019 CareHub+. Designed &amp; Developed by <a href="/">CareHub</a></p>
           </div>
           <div class="col-md-6 col-sm-12 text-md-right text-sm-left">
-            <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
-            <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
-            <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
+            <li><a href="https://www.facebook.com/CareHub-112615073428983/"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="https://twitter.com/home?lang=en"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="https://www.instagram.com/carehub2788/"><span class="fa fa-instagram"></span></a></li>
+
           </div>
         </div>
       </div>
@@ -401,7 +403,8 @@
         </div>
       </div>
     </div>
-
+    <script type="text/javascript">function add_chatinline(){var hccid=10689259;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
     <script src="static/js/jquery-3.2.1.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>

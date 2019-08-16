@@ -1,6 +1,7 @@
 import os
 import secrets
 from PIL import Image
+from flask_bootstrap import Bootstrap
 from flask import render_template, url_for, flash, redirect, request, abort
 from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
@@ -12,7 +13,12 @@ from flask_login import login_user, current_user, logout_user, login_required
 @app.route("/home")
 def home():
     posts = Post.query.all()
+    
+	#most recent post tops
+    posts = Post.query.order_by(Post.date_posted.desc())
     return render_template('home.html', posts=posts)
+
+
 
 @app.route("/", methods=['GET','POST'])
 def index():
@@ -37,6 +43,13 @@ def index():
     return render_template('index.html')
 
 
+@app.route("/support")
+def support():
+    """
+    A view that displays the pattient support page
+    """
+    title = 'Support'
+    return render_template("support.html", title = title)
 
 @app.route("/about")
 def about():
@@ -57,6 +70,52 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
+
+@app.route("/news")
+def news():
+    """
+    A view that displays the pattient service provider(s) page
+    """
+    title = 'News'
+    return render_template("news.html", title = title)
+
+@app.route("/provider")
+def provider():
+    """
+    A view that displays the pattient service provider(s) page
+    """
+    title = 'Providers'
+    return render_template("provider.html", title = title)
+
+@app.route("/services")
+def services():
+    """
+    A view that displays the pattient service provider(s) page
+    """
+    title = 'Providers'
+    return render_template("services.html", title = title)
+
+@app.route('/facts')
+def facts():
+
+    title = 'Contact Us'
+
+    return render_template("facts.html")
+
+@app.route('/contact')
+def contact():
+
+    title = 'Contact Us'
+
+    return render_template("contact.html")
+
+@app.route("/fact")
+def fact():
+    """
+    A view that displays the cancer facts page
+    """
+    title = 'Facts'
+    return render_template("fact.html", title = title)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
